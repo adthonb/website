@@ -1,0 +1,20 @@
+_model: page
+---
+title: About
+---
+body:
+
+I am a Solutions Architect and Technical Lead with 8+ years of software engineering experience, including 5+ years specializing in Kubernetes, AWS, and cloud-native distributed systems.
+
+My background spans healthcare platform architecture, high-availability infrastructure, GitOps automation, and backend engineering.
+
+### Career Highlights
+
+- **Healthcare Scale**: Architected systems deployed across 14 hospitals, supporting 24 microservices and ~1,400 daily users with a 99.95% SLA.
+- **Production Kubernetes**: Designed and operated 5 production clusters across 36 production nodes, plus unified observability across 48 production and UAT nodes.
+- **GitOps Automation**: Built automated CI/CD and deployment pipelines that cut release cycles from ~5 minutes to ~50 seconds.
+- **Healthcare Standards**: Engineered real-time hospital integrations using HL7, MLLP, PACS, and LIS.
+
+### Approach
+
+I enjoy solving complex infrastructure, reliability, and architecture problems, but I remain hands-on writing code, debugging systems, and building automation pipelines.

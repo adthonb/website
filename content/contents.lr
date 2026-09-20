@@ -1,0 +1,150 @@
+_model: page
+---
+title: Home
+---
+body:
+
+**Cloud Architecture &middot; Kubernetes &middot; AWS &middot; Backend Engineering**
+
+I design and build production systems from architecture to deployment.
+
+My work sits between **software architecture, platform engineering, DevOps, and hands-on backend development**. I currently focus on healthcare platforms, Kubernetes infrastructure, distributed systems, CI/CD, observability, and system integration.
+
+I enjoy solving infrastructure and architecture problems, but I still like writing code and building the systems myself.
+
+<div class="metric-grid" aria-label="System Scale and Experience">
+  <div class="metric-card">
+    <div class="metric-value">8+</div>
+    <div class="metric-label">Years Engineering</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">14</div>
+    <div class="metric-label">Hospitals Deployed</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">24</div>
+    <div class="metric-label">Microservices</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">36</div>
+    <div class="metric-label">Production Nodes</div>
+  </div>
+  <div class="metric-card">
+    <div class="metric-value">99.95%</div>
+    <div class="metric-label">SLA Maintained</div>
+  </div>
+</div>
+
+---
+
+## About Me
+
+- Solutions Architect and Technical Lead with 8+ years in software engineering.
+- 5+ years operating Kubernetes and AWS environments.
+- Architected healthcare systems running across 14 hospitals, serving ~1,400 users.
+- Designed and operated 5 production Kubernetes clusters across 36 production nodes.
+- Built unified observability across 48 production and UAT Kubernetes nodes.
+- Automated GitOps and CI/CD pipelines, cutting deployment time from ~5 minutes to ~50 seconds.
+- Engineered healthcare integrations using HL7, MLLP, PACS, and LIS standards.
+- Hands-on with backend development, infrastructure automation, and production debugging.
+- Based in Thailand; open to remote opportunities.
+
+---
+
+## Healthcare Platform Architecture
+
+Microservices-based Healthcare Information System running across on-premises and hybrid-cloud Kubernetes environments:
+
+```text
+14 hospitals
+├── 24 microservices
+├── ~1,400 users
+├── 5 production Kubernetes clusters
+├── 36 production nodes
+└── 99.95% SLA
+```
+
+---
+
+## Technology Stack
+
+<div class="tech-grid">
+  <div class="tech-card">
+    <h3>Cloud &amp; Platform</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">AWS</span>
+      <span class="tech-tag">Kubernetes</span>
+      <span class="tech-tag">Docker</span>
+      <span class="tech-tag">Argo CD</span>
+      <span class="tech-tag">Jenkins</span>
+      <span class="tech-tag">GitLab CI</span>
+    </div>
+  </div>
+
+  <div class="tech-card">
+    <h3>Backend &amp; Languages</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">TypeScript</span>
+      <span class="tech-tag">Node.js</span>
+      <span class="tech-tag">NestJS</span>
+      <span class="tech-tag">Go</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Java</span>
+      <span class="tech-tag">PHP</span>
+      <span class="tech-tag">Bash</span>
+    </div>
+  </div>
+
+  <div class="tech-card">
+    <h3>Data &amp; Messaging</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">PostgreSQL</span>
+      <span class="tech-tag">MySQL</span>
+      <span class="tech-tag">MongoDB</span>
+      <span class="tech-tag">Redis</span>
+      <span class="tech-tag">RabbitMQ</span>
+    </div>
+  </div>
+
+  <div class="tech-card">
+    <h3>Observability &amp; Infrastructure</h3>
+    <div class="tech-tags">
+      <span class="tech-tag">Prometheus</span>
+      <span class="tech-tag">Grafana</span>
+      <span class="tech-tag">NGINX</span>
+      <span class="tech-tag">Keycloak</span>
+      <span class="tech-tag">Loki</span>
+      <span class="tech-tag">Thanos</span>
+      <span class="tech-tag">HAProxy</span>
+      <span class="tech-tag">OAuth2 Proxy</span>
+      <span class="tech-tag">MinIO</span>
+      <span class="tech-tag">pgBackRest</span>
+    </div>
+  </div>
+</div>
+
+---
+
+## Focus Areas
+
+<ul class="topic-list">
+  <li class="topic-item">AI Engineering</li>
+  <li class="topic-item">Cyber Security</li>
+  <li class="topic-item">Cloud-native Infrastructure</li>
+  <li class="topic-item">Healthcare Interoperability</li>
+  <li class="topic-item">Platform Engineering</li>
+  <li class="topic-item">Distributed Systems</li>
+  <li class="topic-item">DevSecOps</li>
+  <li class="topic-item">High-availability Systems</li>
+  <li class="topic-item">Developer Experience</li>
+  <li class="topic-item">Backend Architecture</li>
+  <li class="topic-item">Observability</li>
+</ul>
+
+---
+
+## Let's Connect
+
+I'm interested in connecting with engineers, architects, and teams working on challenging infrastructure and distributed-system problems.
+
+[GitHub: @adthonb](https://github.com/adthonb)

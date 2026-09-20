@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block body %}
+  <section>
+    <h2>Projects</h2>
+    <p>Systems, open-source work, and architecture projects.</p>
+
+    <div class="projects-list">
+      {% for project in this.children %}
+        <article class="project-summary">
+          <h3>
+            {% if project.url %}
+              <a href="{{ project.url }}" target="_blank" rel="noopener">{{ project.name }}</a>
+            {% else %}
+              <a href="{{ project|url }}">{{ project.name }}</a>
+            {% endif %}
+          </h3>
+          {% if project.date %}
+            <div class="project-date">{{ project.date }}</div>
+          {% endif %}
+          {% if project.description %}
+            {{ project.description }}
+          {% endif %}
+        </article>
+      {% else %}
+        <p>No projects listed yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

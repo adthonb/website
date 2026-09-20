@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ this.title }}{% endblock %} &mdash; {{ site.name }}</title>
+  <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css">
+  <link rel="stylesheet" href="{{ '/static/css/custom.css'|url }}">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div>
+        <a href="{{ '/'|url }}" class="site-title-link">
+          <h1 class="site-title">Adthon B.</h1>
+        </a>
+        <div class="tagline">Solutions Architect &middot; Technical Lead</div>
+      </div>
+      <div class="header-controls">
+        <nav class="site-nav">
+          <a href="{{ '/'|url }}">Home</a>
+          <a href="{{ '/about'|url }}">About</a>
+          <a href="{{ '/blog'|url }}">Blog</a>
+          <a href="{{ '/projects'|url }}">Projects</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+          Theme: Light
+        </button>
+      </div>
+    </header>
+
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div>&copy; Adthon B. Hosted on GitHub Pages.</div>
+      <div>Built with <a href="https://www.getlektor.com/" target="_blank" rel="noopener">Lektor</a> &middot; <a href="https://terminalcss.xyz/" target="_blank" rel="noopener">Terminal.css</a></div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      let storedTheme = null;
+      try {
+        storedTheme = localStorage.getItem('theme');
+      } catch (e) {}
+
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark-mode');
+          toggleBtn.textContent = 'Theme: Dark';
+        } else {
+          document.body.classList.remove('dark-mode');
+          toggleBtn.textContent = 'Theme: Light';
+        }
+        try {
+          localStorage.setItem('theme', theme);
+        } catch (e) {}
+      }
+
+      if (storedTheme) {
+        setTheme(storedTheme);
+      } else if (prefersDark) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
+      }
+
+      toggleBtn.addEventListener('click', function () {
+        const isDark = document.body.classList.contains('dark-mode');
+        setTheme(isDark ? 'light' : 'dark');
+      });
+    })();
+  </script>
+</body>
+</html>

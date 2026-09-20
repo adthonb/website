@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ this.name }}{% endblock %}
+
+{% block body %}
+  <article class="project-detail">
+    <h2>{{ this.name }}</h2>
+    {% if this.date %}
+      <div class="project-date">{{ this.date }}</div>
+    {% endif %}
+
+    {% if this.url %}
+      <p><a href="{{ this.url }}" target="_blank" rel="noopener">Visit Project &rarr;</a></p>
+    {% endif %}
+
+    <div class="project-content">
+      {{ this.description }}
+    </div>
+
+    <hr>
+    <p><a href="{{ '/projects'|url }}">&larr; Back to all projects</a></p>
+  </article>
+{% endblock %}

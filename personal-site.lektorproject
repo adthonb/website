@@ -1,0 +1,8 @@
+[project]
+name = Adthon B.
+locale = en_US
+url = https://adthonb.github.io/
+
+[servers.ghpages]
+name = GitHub Pages
+target = ghpages://adthonb/adthonb.github.io

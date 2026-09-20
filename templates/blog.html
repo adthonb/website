@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+  <section>
+    <h2>Blog</h2>
+    <p>Articles on cloud architecture, Kubernetes, backend engineering, and distributed systems.</p>
+
+    <div class="posts-list">
+      {% for post in this.pagination.items %}
+        <article class="post-summary">
+          <h3><a href="{{ post|url }}">{{ post.title }}</a></h3>
+          <div class="post-meta">
+            <time datetime="{{ post.pub_date }}">{{ post.pub_date }}</time>
+            {% if post.author %} &middot; {{ post.author }}{% endif %}
+          </div>
+          {% if post.summary %}
+            <p>{{ post.summary }}</p>
+          {% endif %}
+        </article>
+      {% else %}
+        <p>No posts published yet.</p>
+      {% endfor %}
+    </div>
+
+    {% if this.pagination.pages > 1 %}
+      <div class="pagination">
+        {% if this.pagination.has_prev %}
+          <a href="{{ this.pagination.prev|url }}">&larr; Newer Posts</a>
+        {% endif %}
+        <span>Page {{ this.pagination.page }} of {{ this.pagination.pages }}</span>
+        {% if this.pagination.has_next %}
+          <a href="{{ this.pagination.next|url }}">Older Posts &rarr;</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </section>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block body %}
+  <article class="blog-post">
+    <h2>{{ this.title }}</h2>
+    <div class="post-meta">
+      <time datetime="{{ this.pub_date }}">{{ this.pub_date }}</time>
+      {% if this.author %} &middot; {{ this.author }}{% endif %}
+    </div>
+
+    <div class="post-content">
+      {{ this.body }}
+    </div>
+
+    <hr>
+    <p><a href="{{ '/blog'|url }}">&larr; Back to all posts</a></p>
+  </article>
+{% endblock %}

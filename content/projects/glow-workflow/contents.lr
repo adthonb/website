@@ -1,0 +1,11 @@
+_model: project
+---
+name: Omni Video Orchestrator
+---
+date: 2026-09-08
+---
+url: https://github.com/adthonb/omni-automated-workflow
+---
+description:
+
+Automated workflow to generate video by Google FLow with CLI

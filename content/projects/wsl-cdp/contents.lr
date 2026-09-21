@@ -1,0 +1,11 @@
+_model: project
+---
+name: Windows Sub System (WSL) for Chrome DevTool Protocal
+---
+date: 2026-09-12
+---
+url: https://github.com/adthonb/wsl-agent-cdp
+---
+description:
+
+AI agents running inside WSL2 drive logged-in Windows browser over the Chrome DevTools Protocol.

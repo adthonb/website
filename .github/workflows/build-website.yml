@@ -1,0 +1,45 @@
+name: Build and Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: github-pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Repository
+        uses: actions/checkout@v7
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10.2.0
+        with:
+          enable-cache: true
+
+      - name: Set up Python
+        run: uv python install
+
+      - name: Install Dependencies
+        run: uv sync --frozen
+
+      - name: Build Website with Lektor
+        run: |
+          uv run lektor build -O ./build
+          rm -rf ./build/.lektor
+
+      - name: Deploy to adthonb.github.io
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: adthonb/adthonb.github.io
+          publish_branch: main
+          publish_dir: ./build
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: true

@@ -1,12 +1,47 @@
+/* Commit Mono */
+@font-face {
+  font-family: 'Commit Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/commit-mono-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Commit Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/commit-mono-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Commit Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/commit-mono-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Commit Mono';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/commit-mono-700-italic.woff2') format('woff2');
+}
+
 :root {
   --global-font-size: 15px;
   --global-line-height: 1.5;
-  --font-stack: "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", monospace;
+  --font-stack: "Commit Mono", "CommitMono", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", monospace;
+  --mono-font-stack: "Commit Mono", "CommitMono", "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", monospace;
   --page-width: 58em;
   --code-bg-color: #f5f5f5;
 }
 
 body {
+  font-family: var(--font-stack);
   padding: 2rem 1rem 4rem;
   background-color: var(--background-color, #fff);
   color: var(--font-color, #1a1a1a);
@@ -266,10 +301,47 @@ body.dark-mode .topic-item {
   border-top: 1px dashed var(--secondary-color, #ccc);
 }
 
+/* Bottom Navigation */
+.bottom-nav {
+  margin-top: 2.5rem;
+}
+
+.bottom-nav .terminal-menu ul {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.bottom-nav .terminal-menu li {
+  margin: 0;
+}
+
+.bottom-nav .nav-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--secondary-color, #666);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.bottom-nav .nav-link:hover {
+  color: var(--primary-color, #0066cc);
+  text-decoration: underline;
+}
+
+body.dark-mode .bottom-nav .nav-link {
+  color: var(--secondary-color, #888);
+}
+
+body.dark-mode .bottom-nav .nav-link:hover {
+  color: var(--primary-color, #62c4ff);
+}
+
 /* Footer */
 .site-footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
   border-top: 1px solid var(--secondary-color, #aaa);
   font-size: 0.85rem;
   color: var(--secondary-color, #666);

@@ -111,11 +111,13 @@ uv add <package-name>
 
 ## 6. Writing Voice & Anti-Slop Principles
 
+**Always activate and use the user's `no-ai-slop` skill (`~/.gemini/antigravity-cli/skills/no-ai-slop/SKILL.md`) whenever writing, editing, or updating Adthon's personal information, bio, blog posts, project descriptions, or any site content.**
+
 When drafting or editing content:
 
 - **Preserve the writer's authentic voice**: Keep phrasing direct, hands-on, and personal ("I design and build...", "My work sits between...", "I enjoy solving infrastructure problems, but I still like writing code myself").
 - **Concrete over abstract**: State specific numbers and scale (e.g. 14 hospitals, 24 microservices, 36 production nodes, ~5 min &rarr; ~50 sec deployment).
-- **No AI slop / cliches**: Avoid words like *delve, foster, leverage, utilize, streamline, robust, cutting-edge, tapestry, beacon, transformative, paramount*.
+- **No AI slop / cliches**: Avoid words like *delve, foster, leverage, utilize, streamline, robust, cutting-edge, tapestry, beacon, transformative, paramount, spearhead, harness, testament, seamless*.
 - **No formatting decoration**: Do not put emojis in headings. Use plain text headings (`About Me`, `Technology Stack`, `Let's Connect`).
 
 ---

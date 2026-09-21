@@ -4,8 +4,10 @@ title: About
 ---
 body:
 
-As Technical Lead and Senior DevOps / Platform Engineer at CK-THINK, I take a lead design, scaling, and optimizing the infrastructure that powers healthcare solutions. with 8+ years of software engineering experience, including 5+ years operating Kubernetes, AWS, and hybrid cloud infrastructure in production.
-
+As Technical Lead and Senior DevOps / Platform Engineer at CK-THINK, I take a lead design, scaling, and optimizing the infrastructure that powers healthcare solutions.
+<br><br>
+8+ years in software engineering experience, including 5+ years operating Kubernetes and AWS in production.
+<br><br>
 My background spans healthcare platform architecture, high-availability infrastructure, GitOps automation, and backend engineering.
 <br><br>
 ### Career Highlights
@@ -31,6 +33,7 @@ I enjoy solving complex infrastructure, reliability, and architecture problems, 
       <span class="tech-tag">AWS</span>
       <span class="tech-tag">Kubernetes</span>
       <span class="tech-tag">Terraform</span>
+      <span class="tech-tag">Helm</span>
       <span class="tech-tag">Docker</span>
       <span class="tech-tag">Argo CD</span>
       <span class="tech-tag">GitLab CI</span>
@@ -39,13 +42,16 @@ I enjoy solving complex infrastructure, reliability, and architecture problems, 
   </div>
 
   <div class="tech-card">
-    <h3>Backend &amp; Scripting</h3>
+    <h3>Languages &amp; Framework</h3>
     <div class="tech-tags">
       <span class="tech-tag">Go</span>
       <span class="tech-tag">Python</span>
       <span class="tech-tag">Bash</span>
-      <span class="tech-tag">TypeScript</span>
+      <span class="tech-tag">Javascript</span>
       <span class="tech-tag">Node.js</span>
+      <span class="tech-tag">NestJS</span>
+      <span class="tech-tag">React</span>
+      <span class="tech-tag">PHP</span>
     </div>
   </div>
 
@@ -56,6 +62,7 @@ I enjoy solving complex infrastructure, reliability, and architecture problems, 
       <span class="tech-tag">Redis</span>
       <span class="tech-tag">RabbitMQ</span>
       <span class="tech-tag">MongoDB</span>
+      <span class="tech-tag">MinIO</span>
     </div>
   </div>
 
@@ -71,9 +78,7 @@ I enjoy solving complex infrastructure, reliability, and architecture problems, 
       <span class="tech-tag">OpenTelemetry</span>
       <span class="tech-tag">HAProxy</span>
       <span class="tech-tag">OAuth2 Proxy</span>
-      <span class="tech-tag">MinIO</span>
       <span class="tech-tag">pgBackRest</span>
-      <span class="tech-tag">Helm</span>
     </div>
   </div>
 </div>
@@ -83,8 +88,8 @@ I enjoy solving complex infrastructure, reliability, and architecture problems, 
 ## Core Focus
 
 <ul class="topic-list">
-  <li class="topic-item">Internal Developer Platforms (IDP) &amp; GitOps Automation</li>
-  <li class="topic-item">AI/ML Integration (GPU Provisioning &amp; Serving)</li>
-  <li class="topic-item">Healthcare Data Pipelines (HL7, PACS, LIS) &amp; Compliance</li>
-  <li class="topic-item">High-Availability Hybrid Cloud Infrastructure</li>
+  <li>Internal Developer Platforms (IDP) &amp; GitOps Automation</li>
+  <li>AI/ML Integration (GPU Provisioning &amp; Serving)</li>
+  <li>Healthcare Data Pipelines (HL7, PACS, LIS) &amp; Compliance</li>
+  <li>High-Availability Hybrid Cloud Infrastructure</li>
 </ul>

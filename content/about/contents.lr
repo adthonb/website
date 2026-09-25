@@ -12,7 +12,7 @@ My background spans Healthcare platform, E-commerce, high-availability infrastru
 <br><br>
 ### Career Highlights
 
-- **Healthcare Scale**: Architected systems deployed across 14 hospitals, supporting 24 microservices and ~1,400 daily users with a 99.95% SLA.
+- **Healthcare Scale**: Architected systems deployed across 15 hospitals, supporting 24 microservices and ~1,400 daily users with a 99.95% SLA.
 - **Production Kubernetes**: Designed and operated 5 production clusters across 36 nodes (AWS EKS and on-premises), plus unified observability across 48 production and UAT nodes.
 - **Internal Developer Platform & GitOps**: Built automated CI/CD and deployment pipelines that cut release cycles from ~5 minutes to ~50 seconds.
 - **Healthcare Standards**: Engineered real-time hospital integrations and clinical imaging workflows using HL7, MLLP, PACS, and LIS.

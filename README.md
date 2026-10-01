@@ -9,7 +9,7 @@ Source repository for [adthonb.github.io](https://adthonb.github.io/), built wit
 This project uses a two-repository setup modeled after [ericmjl/website](https://github.com/ericmjl/website):
 
 - **`website/` (This Repository)**: Source code, content models, Jinja2 templates, and Markdown content.
-- **`adthonb.github.io/` (`../adthonb.github.io`)**: Destination repository that serves the compiled static HTML/CSS on GitHub Pages.
+- **`adthonb.github.io/`**: Destination repository that serves the compiled static HTML/CSS on GitHub Pages (deployed automatically via GitHub Actions).
 
 ---
 
@@ -88,26 +88,27 @@ Description of what you built, the architecture, and technologies used.
 
 ---
 
-## Building and Publishing to GitHub Pages
+## Building and Deployment
 
-### 1. Build the Static Output
+Deployment to GitHub Pages is fully automated via GitHub Actions (`.github/workflows/build-website.yml`).
 
-Compile the site directly into your deployment repository:
+### Local Verification
+
+To verify that the site builds without errors before pushing:
 
 ```bash
-uv run lektor build -O ../adthonb.github.io
+uv run lektor build
 ```
 
-### 2. Push Changes to GitHub Pages
+### Automated Deployment
 
-Navigate to the `adthonb.github.io` directory and push:
+Simply commit and push your changes to the `main` branch:
 
 ```bash
-cd ../adthonb.github.io
-git add .
-git commit -m "Publish new post"
 git push origin main
 ```
+
+GitHub Actions will automatically install dependencies, build the static site with Lektor, and deploy the generated output to [adthonb.github.io](https://adthonb.github.io/).
 
 ---
 

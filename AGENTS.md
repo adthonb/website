@@ -4,19 +4,20 @@ Instructions and architecture guide for AI coding agents working on this website
 
 ---
 
-## 1. Project Overview & Two-Repo Architecture
+## 1. Project Overview & Architecture
 
 This repository (`website`) contains the **source code, content, models, assets, and templates** for Adthon's personal website and portfolio.
 
 - **Source Repository**: `website/` (this repository). All authoring, design, and development happen here.
-- **Deployment Repository**: `adthonb.github.io/` (`../adthonb.github.io`). Contains purely the compiled static build output hosted on GitHub Pages (`https://adthonb.github.io/`), modeled after [ericmjl/website](https://github.com/ericmjl/website) & [ericmjl.github.io](https://github.com/ericmjl/ericmjl.github.io).
+- **Deployment Repository**: `adthonb.github.io/`. Contains purely the compiled static build output hosted on GitHub Pages (`https://adthonb.github.io/`).
+- **Deployment Workflow**: Fully automated via GitHub Actions (`.github/workflows/build-website.yml`). Pushing changes to `main` automatically builds and deploys to `adthonb.github.io`.
 - **Generator**: [Lektor](https://www.getlektor.com/) (`3.3+`).
 - **Python Environment**: [uv](https://docs.astral.sh/uv/) (`pyproject.toml`, `.venv`).
 - **CSS Framework**: [Terminal.css](https://terminalcss.xyz/) via CDN with custom overrides and dark mode support.
 - **Templating**: Jinja2 (`templates/`).
 - **Content Format**: Lektor `.lr` files (`contents.lr`).
 
-> **Important**: Never author or edit content directly inside `../adthonb.github.io`. All source files live here. Always rebuild into `../adthonb.github.io`.
+> **Important**: Never author or edit content directly inside `adthonb.github.io`. All source files live in `website`. Deployment is handled automatically by GitHub Actions upon pushing to `main`.
 
 ---
 
@@ -66,8 +67,8 @@ All development commands are executed from this repository root (`website/`):
 # 1. Start local development server with auto-reload (http://127.0.0.1:5000)
 uv run lektor server
 
-# 2. Build static output directly into the GitHub Pages repository
-uv run lektor build -O ../adthonb.github.io
+# 2. Verify static build locally
+uv run lektor build
 
 # 3. Clean build cache if needed
 uv run lektor clean --yes
@@ -122,17 +123,16 @@ When drafting or editing content:
 
 ---
 
-## 7. Verification & Deployment
+## 7. Verification & Automated Deployment
+
+Deployment to GitHub Pages (`adthonb.github.io`) is fully automated via GitHub Actions (`.github/workflows/build-website.yml`). Pushing commits to `main` triggers the build and publish workflow.
 
 ```bash
-# Verify build succeeds without template or model errors
-uv run lektor build -O ../adthonb.github.io
+# 1. Verify build succeeds locally without template or model errors
+uv run lektor build
 
-# Inspect changes in the deployment repository
-cd ../adthonb.github.io
-git status
-git diff
-
-# Test locally if needed
-python3 -m http.server 5000
+# 2. Commit and push changes to trigger automated deployment
+git add <files>
+git commit -m "feat/fix/docs: meaningful description"
+git push origin main
 ```
